@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyBusinessCardApp());
+}
+
+class MyBusinessCardApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My Business Card'),
+        ),
+        body: Center(
+          child: Card(
+            elevation: 5,
+            margin: EdgeInsets.all(16),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/ikku.jpg'),
+                ),
+                SizedBox(height: 16),
+                Text(
+                  'EMMANUAL BABY',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  'Your Job Title',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey,
+                  ),
+                ),
+                SizedBox(height: 16),
+                ListTile(
+                  leading: Icon(Icons.phone),
+                  title: Text('+91 9188000000'),
+                ),
+                ListTile(
+                  leading: Icon(Icons.email),
+                  title: Text('emmanual@email.com'),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
